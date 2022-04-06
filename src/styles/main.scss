@@ -55,6 +55,7 @@ body
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 2;
     &__nav
     {
         flex-basis: 270%;
@@ -124,7 +125,6 @@ body
     &__link
     {
         font-size: 1.6rem;
-        height: 100px;
         border-right: 1px solid rgba($color: $wh, $alpha: 0.5);
         margin-left: 30px;
         &-vk
@@ -168,6 +168,7 @@ body
     width: 170px;
     text-decoration: none;
     color: $wh;
+    z-index: 1;
     &:hover
     {
        &::before
