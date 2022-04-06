@@ -16,7 +16,7 @@ module.exports = ({develop}) => ({
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'images/[hash][ext][query]',
+    assetModuleFilename: 'image/[hash][ext][query]',
     clean:true,
   },
   plugins: [

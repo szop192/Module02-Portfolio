@@ -1,5 +1,238 @@
-$bg: #ff0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-body{
-    background-color: $bg;
+$red: #D40000;
+$black: #232326;
+$wh: #F3F2F0;
+
+$r_mob_500: 500px;
+
+html
+{
+    font-size: 10px;
+    @media (max-width:$r_mob_500) 
+    {
+        font-size: 8px;
+    }
+}
+body
+{
+    font-family: Inter;
+    position: relative;
+    color: $wh;
+}
+
+.container
+{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.block
+ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.link
+{
+    text-decoration: none;
+    transition: 0.3s;
+    color: $wh;
+    &:hover
+    {
+        color: $red;
+    }
+}
+.header
+{
+    background-color: $black;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    &__nav
+    {
+        flex-basis: 270%;
+    }
+    &__list
+    {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 2.8rem;
+
+    }
+    &__link
+    {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    &__tel
+    {
+        border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
+        width: 140px;
+        flex-basis: 37%;
+    }
+    &__mail
+    {
+        padding-left: 10px;
+    }
+}
+.name
+{
+    background-color: $black;
+    padding-top: 2rem;
+    margin-top: 10rem;
+    padding-bottom: 40rem;
+    &__h1
+    {
+        margin-top: 12rem;
+    }
+    &__block
+    {
+        margin-top: 10.3rem;
+        margin-bottom: 6rem;
+    }
+    &__img
+    {
+        width: 100%;
+        height: auto;
+    }
+    &__soc
+    {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__flex
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        width: 100%;
+        height: 177px;
+        border-top: 2px solid rgba($color: $wh, $alpha: 0.5);
+    }
+    &__link
+    {
+        font-size: 1.6rem;
+        height: 100px;
+        border-right: 1px solid rgba($color: $wh, $alpha: 0.5);
+        margin-left: 30px;
+        &-vk
+        {
+            width: 43px;
+        }
+        &-inst
+        {
+            width: 100px;
+        }
+        &-git
+        {
+            border: none;
+        }
+    }
+}
+.head-h1
+{
+    font-size: 7.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    &__name
+    {
+        display: block;
+        font-size: 2.8rem;
+        line-height: 1.5;
+        padding-bottom: 3.2rem;
+        text-transform: none;
+        font-weight: 400;
+    }
+}
+.popup
+{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 170px;
+    text-decoration: none;
+    color: $wh;
+    &:hover
+    {
+       &::before
+       {
+           width: 100%;
+       }
+    }
+    &::before
+    {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: $wh;
+        left: 0%;
+        transition: 0.3s;
+        bottom: -5px;
+    }
+    &::after
+    {
+        content: '';
+        background-image: url(../img/Arrow.svg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 12px;
+        position: absolute;
+        right: 0;
+    }
+}
+.item
+{
+    height: 81px;
+    min-width: 238px;
+    &__h1
+    {
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 150%;
+        margin-bottom: 1.5rem;
+    }
+    &__text
+    {
+        font-size: 1.4rem;
+        opacity: 0.8;
+        line-height: 1.5;
+        &-1
+        {
+            width: 200px;
+        }
+        &-2
+        {
+            width: 212px;
+        }
+        &-3
+        {
+            width: 204px;
+        }
+        &-4
+        {
+            width: 239px;
+        }
+    }
 }
