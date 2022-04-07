@@ -422,12 +422,44 @@ body
     }
     &__des
     {
-        padding-top: 18rem;
+        padding-top: 15rem;
+        border-bottom: 1px solid rgba($color: $wh, $alpha: 0.5);
+        height: 230px;
     }
     &__describ
     {
         font-size: 28px;
         line-height: 150%;
         width: 870px;
+    }
+    &__grid
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-top: 7rem;
+        align-items: center;
+        gap: 5rem;
+    }
+    &__item-grid
+    {
+        display: flex;
+        align-items: center;
+    }
+    &__text-grid
+    {
+        padding-left: 4rem;
+        width: 244px;
+    }
+    &__h1-grid
+    {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__des-grid
+    {
+        font-size: 14px;
+        line-height: 150%;
+        opacity: 0.8;
     }
 }
