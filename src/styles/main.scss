@@ -948,7 +948,7 @@ body
     &__author-link 
     {
         color: $wh;
-        opacity: 0.3;
+        opacity: 0.6;
         transition: 0.3s;
 
         &:hover 
@@ -957,4 +957,78 @@ body
         }
     }
 }
+.background 
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    z-index: 3;
+}
+.popupmax
+{
+    background-color: $black;
+    max-width: 587px;
+    margin: 100px auto;
+    position: relative;
+    &__form
+    {
+        padding-top: 5.5rem;
+        padding-bottom: 4rem;
+    }
+    &__head
+    {
+        display: block;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+    &__h1
+    {
+        font-size: 22px;
+    }
+    &__text
+    {
+        font-size: 16px;
+        width: 426px;
+        height: auto;
+        padding-left: 6rem;
+    }
+    &__wrap
+    {
+        padding-top: 4rem;
+    }
+    &__control
+    {
+        width: 531px;
+    }
+
+}
+.background:target 
+{
+    display: block;
+}
+.popup-close 
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-color: transparent;
+    background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 2;
+}     
+
+
+
 
