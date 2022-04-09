@@ -19,8 +19,12 @@
                         <li class="header__item"><a class="header__link link scroll" href="#form">Обратная связь</a></li>
                     </ul>
                 </nav>
-                <a class="header__link header__tel link" href="tel:89649264857">8 964 926-48-57</a>
-                <a class="header__link header__mail link" href="mailto:ok.jl@mail.ru">ok.jl@mail.ru</a>
+                <div class="header__contact">
+                    <a class="header__link header__tel link" href="tel:89649264857">8 964 926-48-57</a>
+                    <a class="header__link header__mail link" href="mailto:ok.jl@mail.ru">ok.jl@mail.ru</a>
+                </div>
+                <a class="header__link header__tel link header__hidetel" href="tel:89649264857">8 964 926-48-57</a>
+                <button class="header__menu" onclick="openModal()"></button>
             </div>
         </div>
     </header>
@@ -35,9 +39,9 @@
                 <div class="block name__block">
                     <a class="popup" href="#background">Обсудить проект</a>
                     <div class="name__soc">
-                        <a class="name__link link name__link-vk" href="#">Vk</a>
-                        <a class="name__link link name__link-inst" href="#">Instagram</a>
-                        <a class="name__link link name__link-git" href="#">GitHub</a>
+                        <a class="name__link link name__link-vk" target="_blank" href="https://vk.com/szopbeats37">Vk</a>
+                        <a class="name__link link name__link-inst" target="_blank" href="#">Instagram</a>
+                        <a class="name__link link name__link-git" target="_blank" href="https://github.com/szop192">GitHub</a>
                     </div>
                 </div>
                 <img class="name__sphere" src="./img/spere.svg" alt="sphere">
@@ -306,9 +310,9 @@
             </div>
             <div class="form__flex">
                 <div class="form__soc">
-                    <a class="form__link form__link-vk" href="#">Vk</a>
-                    <a class="form__link form__link-inst" href="#">Instagram</a>
-                    <a class="form__link form__link-git" href="#">GitHub</a>
+                    <a class="form__link form__link-vk" target="_blank" href="https://vk.com/szopbeats37">Vk</a>
+                    <a class="form__link form__link-inst" target="_blank" href="#">Instagram</a>
+                    <a class="form__link form__link-git" target="_blank" href="https://github.com/szop192">GitHub</a>
                 </div>
                 <form class="form__wrap">
                     <label class="form__label">Телефон или почта</label>
@@ -385,6 +389,25 @@
             </div>
         </div>
     </div> 
+    <div class="modal" id="modal">
+        <ul class="header__list modal__list">
+            <li class="header__item modal__item"><a class="header__link link scroll modal__link" href="#about">Обо мне</a></li>
+            <li class="header__item modal__item"><a class="header__link link scroll modal__link" href="#portfolio">Портфолио</a></li>
+            <li class="header__item modal__item"><a class="header__link link scroll modal__link" href="#stage">Этапы работ</a></li>
+            <li class="header__item modal__item"><a class="header__link link scroll modal__link" href="#price">Цены</a></li>
+            <li class="header__item modal__item"><a class="header__link link scroll modal__link" href="#form">Обратная связь</a></li>
+        </ul>
+        <div class="header__contact modal__contact">
+            <a class="header__link modal__tel header__tel link" href="tel:89649264857">8 964 926-48-57</a>
+            <a class="header__link modal__mail header__mail link" href="mailto:ok.jl@mail.ru">ok.jl@mail.ru</a>
+        </div>
+        <div class="form__soc modal__soc">
+            <a class="form__link modal__socity modal__vk form__link-vk" target="_blank" href="https://vk.com/szopbeats37">Vk</a>
+            <a class="form__link modal__socity modal__inst form__link-inst" target="_blank" href="#">Instagram</a>
+            <a class="form__link modal__socity modal__git form__link-git" target="_blank" href="https://github.com/szop192">GitHub</a>
+        </div>
+        <button class="modal__close" onclick="closeModal()"></button>
+    </div>
     <script>
         const links = document.querySelectorAll(".scroll");
 

@@ -3,9 +3,20 @@
 $red: #D40000;
 $black: #232326;
 $wh: #F3F2F0;
-$dark: #141416;
 
-$r_mob_500: 500px;
+$r_minmob:320px;
+$r_mob_360:360px;
+$r_mob_400:400px;
+$r_mob_500:500px;
+$r_mob_600:600px;
+$r_tab:768px;
+$r_tab_900:900px;
+$r_desk:1000px;
+$r_desk_1120:1120px;
+$r_desk_hd:1200px;
+$r_desk_1280:1280px;
+$r_desk_1350:1350px;
+$r_desk_full_1750:1750px;
 
 html
 {
@@ -60,10 +71,11 @@ body
     width: 100%;
     top: 0;
     z-index: 2;
-    &__nav
-    {
-        flex-basis: 270%;
-    }
+    @media(max-width: $r_tab)
+        {
+            position: relative;
+            padding-bottom: 0;
+        }
     &__list
     {
         display: flex;
@@ -71,22 +83,76 @@ body
         margin: 0;
         padding-left: 0;
         gap: 2.8rem;
-
+        @media (max-width: $r_desk)
+        {
+            gap: 1.5rem;
+        }
+        @media(max-width: $r_tab)
+        {
+            display: none;
+        }
     }
     &__link
     {
         font-size: 1.4rem;
         line-height: 1.5;
     }
+    &__contact
+    {
+        @media(max-width: $r_tab)
+        {
+            display: none;
+            align-self: flex-start;
+        }
+    }
     &__tel
     {
         border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
         width: 140px;
-        flex-basis: 37%;
+        padding-right: 3rem;
+        @media (max-width: $r_desk)
+        {
+            padding-right: 1.5rem;
+        }
     }
     &__mail
     {
-        padding-left: 10px;
+        padding-left: 3rem;
+        @media (max-width: $r_desk)
+        {
+            padding-left: 1.5rem;
+        }
+    }
+    &__hidetel
+    {
+        display: none;
+        border: none;
+        @media(max-width: $r_tab)
+        {
+            display: block;
+            flex-basis: 100%;
+        }
+    }
+    &__menu
+    {
+        display: none;
+        @media(max-width: $r_tab)
+        {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 2.5rem 2.5rem;
+            background-image: url(../img/burger.svg);
+            background-color: transparent;
+            position: relative;
+            border: none;
+            transition: 0.3s;
+            opacity: 0.8;
+            padding: 0;
+            cursor: pointer;
+        }
     }
 }
 .name
@@ -94,6 +160,10 @@ body
     padding-top: 2rem;
     margin-top: 10rem;
     z-index: 0;
+    @media(max-width: $r_tab)
+        {
+            margin-top: 2rem;
+        }        
     &__h1
     {
         margin-top: 12rem;
@@ -1027,7 +1097,91 @@ body
     right: 15px;
     top: 15px;
     z-index: 2;
-}     
+} 
+.modal
+{
+    max-width: 100%;
+    background-color: $black;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: -450px;
+    margin: 0 auto;
+    transition: 0.5s;
+    padding: 30px 10px 20px 10px;
+    box-sizing: border-box;
+    height: 460px;
+    z-index: 99;
+    display: none;
+    @media (max-width: $r_tab) 
+    {
+        display: block;
+    }
+    @media (max-width: $r_mob_500) 
+    {
+        height: 370px;
+    }
+    &__list
+    {
+        display: block;
+        padding-top: 4rem;
+        opacity: 0.8;
+        padding-bottom: 1rem;
+        &::hover
+        {
+            opacity: 1;
+        }
+    }
+    &__item
+    {
+        border-top: 1px solid rgba($color: $wh, $alpha: 0.5);
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    &__link
+    {
+        font-size: 2rem;
+    }
+    &__close 
+    {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        background-image: url(../img/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 32px;
+        right: 11px;
+        opacity: 0.7;
+        transition: 0.3s;
+        &:hover
+        {
+            opacity: 1;
+        }
+    }
+    &__contact
+    {
+        display: block;
+        padding-bottom: 1rem;
+    }
+    &__soc
+    {
+        width: auto;
+        display: block;
+        align-self: auto;
+    }
+    &__socity
+    {
+        padding-right: 1rem;
+        margin-left: 0;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+    }
+}
 
 
 
