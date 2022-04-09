@@ -364,7 +364,7 @@ body
 }
 .portfolio
 {
-    background-color: $dark;
+    background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
     z-index: 0;
     &__flex
     {
@@ -439,6 +439,7 @@ body
         padding-top: 7rem;
         align-items: center;
         gap: 5rem;
+        padding-bottom: 16rem;
     }
     &__item-grid
     {
@@ -462,4 +463,498 @@ body
         line-height: 150%;
         opacity: 0.8;
     }
+    &__table
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+    &__elem
+    {
+        border: 1px solid rgba($color: $wh, $alpha: 0.5);
+        width: 283px;
+        height: 148px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        transition: 0.3s;
+        &:hover
+        {
+            border: 1px solid rgba($color: $wh, $alpha: 1);
+            .portfolio__element
+            {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+            .portfolio__tooltiptext
+            {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__element
+    {
+        filter: grayscale(1); 
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+    &__top
+    {
+        display: block;
+        padding-bottom: 0.7rem;
+    }
+    &__tooltip
+    {
+        position: relative;
+        display: inline-block;
+    }
+    &__tooltiptext 
+    {
+        visibility: hidden;
+        width: 188px;
+        background-color: $red;
+        color: $wh;
+        text-align: center;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 113%;
+        left: 0;
+        margin-left: -60px;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 150%;
+        opacity: 0.2;
+        transition: 0.3s;
+        &-vue
+        {
+            left: 6px;
+        }
+        &-php
+        {
+            left: 18px;
+        }
+        &-word
+        {
+            left: 5px;
+        }
+        &::after 
+        {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent $red  transparent;
+        }
+    }
 }
+.price
+{
+    padding-top: 14rem;
+    &__head
+    {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 8rem;
+    }
+    &__el
+    {
+        position: absolute;
+        top: -51px;
+        left: -68px;
+        z-index: -1;
+    }
+    &__top
+    {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__des
+    {
+        font-size: 2.8rem;
+        line-height: 150%;
+        opacity: 0.8;
+        width: 548px;
+        height: 168px;
+        margin: 0;
+    }
+    &__item
+    {
+        border-top: 1px solid rgba($color: $wh, $alpha: 0.5);
+        padding-top: 4rem;
+    }
+    &__first
+    {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    &__h1
+    {
+        font-size: 2.8rem;
+        line-height: 150%;
+        width: 382px;
+        font-weight: 400;
+    }
+    &__descrip
+    {
+        display: block;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 150%;
+        opacity: 0.8;
+        padding-top: 2rem;
+    }
+    &__list
+    {
+        padding-left: 22.5rem;
+    }
+    &__enter
+    {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        margin-left: -17px;
+    }
+    &__stage
+    {
+        font-size: 16px;
+        line-height: 200%;
+        opacity: 0.8;
+        padding-top: 0.7rem;
+    }
+    &__second
+    {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+    &__elsmal
+    {
+        position: absolute;
+        top: 30px;
+        right: 503px;
+    }
+    &__rub
+    {
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 150%;
+        padding-left: 42rem;
+        z-index: 1;
+    }
+}
+.form
+{
+    padding-top: 15rem;
+    &__head
+    {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 5.5rem;
+        position: relative;
+        border-bottom: 1px solid rgba($color: $wh, $alpha: 0.5);
+    }
+    &__h1
+    {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__text
+    {
+        font-size: 28px;
+        line-height: 150%;
+        opacity: 0.8;
+        width: 548px;
+        height: 168px;
+        margin: 0;
+    }
+    &__img
+    {
+        position: absolute;
+        top: -32px;
+        left: -181px;
+        z-index: -1;
+    }
+    &__flex
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
+    &__soc
+    {
+        width: 277px;
+        display: flex;
+        align-self: flex-end;
+    }
+    &__link
+    {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: $wh;
+        transition: 0.3s;
+        text-decoration: none;
+        width: 50px;
+        border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
+        margin-left: 30px;
+        &-vk
+        {
+            width: 43px;
+            margin-left: 0px;
+            padding: 0;
+        }
+        &-inst
+        {
+            width: 100px;
+        }
+        &-git
+        {
+            border: none;
+        }
+        &:hover
+        {
+            color: $red;
+        }
+    }
+    &__wrap
+    {
+        width: 560px;
+    }
+    &__label
+    {
+        display: block;
+        font-size: 12px;
+        line-height: 150%;
+        opacity: 0.8;
+        padding-bottom: 1rem;
+    }
+    &__input
+    {
+        background-color: rgba($color: $wh, $alpha: 0.1);
+        font-size: 18px;
+        font-weight: 400;
+        border: none;
+        margin-bottom: 20px;
+        outline: none;
+        width: 95%;
+        padding-left: 25px;
+        height: 60px;
+        &::placeholder
+        {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            opacity: 0.4;
+        }
+    }
+    &__button
+    {
+        display: block;
+        border: none;
+        background-color: $red;
+        color: $wh;
+        padding: 2rem 23.5rem;
+        margin-top: 4rem;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover
+        {
+            background-color: #EA0E00;
+        }
+    }
+}
+
+.drop
+{
+    display:inline-block;
+    position: relative;
+    
+    &__input
+    {
+      display:none;
+      &:checked
+      {
+        ~.drop-items
+        {
+          opacity:1;
+          max-height: 400px;
+          padding: .6rem 0;
+        }
+        ~.control
+        {       
+          z-index:99;
+          &:after{transform: rotate(180deg);}
+        }
+        ~.overlay-close
+        {
+          transform: none;
+          pointer-events:initial;
+        }
+      }
+    }
+    
+.control
+{
+    position:relative;
+    color: $wh;
+    display:inline-block;
+    cursor: pointer;
+    padding: 2.35rem 2rem 2.35rem 2rem;
+    background-color: rgba($color: $wh, $alpha: 0.1);
+    transition: all .3s ease;
+    font-size: 12px;
+    line-height: 150%; 
+    width: 518px;   
+    &:after
+    {
+        content:"";
+        display:inline-block;      
+        height:.5em;
+        width: 1em;
+        margin-left: 36.8em;
+        background-image: url(../img/Arrowdown.svg);
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: contain;      
+        transition: transform .3s ease;
+    }
+}
+    
+.drop-items
+{
+    position: absolute;
+    top: calc(100% + .4rem);    
+    width: 100%;
+    padding:0;
+    margin:0;
+    margin-top: -20px;
+    transition: all .3s ease;    
+    background-color: rgba($color: #38383A, $alpha: 1);   
+    overflow:hidden;
+    max-height:0;
+    opacity:0;
+    z-index:99;
+}      
+.item-drop
+{
+    list-style:none;       
+    display:block;
+    color: $wh;
+    text-decoration: none;
+    padding: 0.5rem 0 0.5rem 2rem;
+    opacity: 0.4;
+    transition: all .3s ease;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 150%;
+    @media (hover: hover) 
+    {
+        &:hover
+        {
+            opacity: 1;
+        }          
+    }
+}
+    .overlay-close
+    {
+        position: fixed;    
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        z-index:9;
+        transform: translate(100%,0);
+        pointer-events:none;
+    }
+}
+.footer
+{
+    padding-top: 3.2rem;
+    &__flex
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        border-top: 1px solid rgba($color: $wh, $alpha: 0.5);
+        height: 84px;
+    }
+    &__list
+    {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        gap: 2.8rem;
+    }
+    &__link
+    {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    &__tel
+    {
+        border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
+        width: 140px;
+        padding-right: 3rem;
+    }
+    &__mail
+    {
+        padding-left: 3rem;
+    }
+    &__under
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 3rem;
+    }
+    &__copy 
+    {
+        opacity: 0.3;
+        font-size: 12px;
+        line-height: 150%;
+    }
+   
+    &__author-text 
+    {
+        opacity: 0.3;
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    &__author-link 
+    {
+        color: $wh;
+        opacity: 0.3;
+        transition: 0.3s;
+
+        &:hover 
+        {
+            opacity: 1;
+        }
+    }
+}
+
