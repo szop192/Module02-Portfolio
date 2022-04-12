@@ -4,18 +4,16 @@ $red: #D40000;
 $black: #232326;
 $wh: #F3F2F0;
 
-$r_mob_360:360px;
 $r_mob_400:400px;
 $r_mob_500:500px;
 $r_mob_600:600px;
+$r_mob_700:700px;
 $r_tab:768px;
 $r_tab_900:900px;
 $r_desk:1000px;
-$r_desk_1120:1120px;
 $r_desk_hd:1200px;
 $r_desk_1280:1280px;
-$r_desk_1350:1350px;
-$r_desk_full_1750:1750px;
+
 
 html
 {
@@ -209,11 +207,11 @@ body
         gap: 1.5rem;
         width: 100%;
         height: 177px;
-        border-top: 2px solid rgba($color: $wh, $alpha: 0.5);
+        border-top: 2px solid rgba($color: $wh, $alpha: 1);
         @media (max-width:$r_desk) 
         {
             grid-template-columns: repeat(2,1fr);
-            gap: 5rem;
+            gap: 2rem;
             height: 300px;
         }
         @media (max-width:$r_mob_500) 
@@ -381,8 +379,8 @@ body
     z-index: 1;
     @media (max-width:$r_mob_500) 
     {
-        width: 120px;
-        font-size: 1.4rem;
+        width: 106px;
+        font-size: 1.2rem;
     }
     &:hover
     {
@@ -532,7 +530,7 @@ body
     &__flex
     {
         display: flex;
-        border-bottom: 1px solid rgba($color: $wh, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: $wh, $alpha: 1);
         justify-content: space-between;
         height: 228px;
         @media (max-width:$r_tab_900)
@@ -754,8 +752,8 @@ body
         z-index: -1;
         @media (max-width: $r_desk)
         {
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
             right: 70px;
         }
         @media (max-width: $r_tab)
@@ -884,7 +882,7 @@ body
     &__des
     {
         padding-top: 15rem;
-        border-bottom: 1px solid rgba($color: $wh, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: $wh, $alpha: 1);
         height: 230px;
         width: auto;
         @media (max-width: $r_desk)
@@ -948,6 +946,7 @@ body
         @media (max-width: $r_tab)
         {
             grid-template-columns: repeat(1,1fr);
+            padding-bottom: 9rem;
         }
     }
     &__item-grid
@@ -1008,12 +1007,13 @@ body
     &__elem
     {
         border: 1px solid rgba($color: $wh, $alpha: 0.5);
-        width: 283px;
+        width: auto;
         height: 148px;
         align-items: center;
         display: flex;
         justify-content: center;
         transition: 0.3s;
+        cursor: pointer;
         &:hover
         {
             border: 1px solid rgba($color: $wh, $alpha: 1);
@@ -1021,6 +1021,7 @@ body
             {
                 filter: grayscale(0);
                 opacity: 1;
+                transform: scale(1.1);
             }
             .portfolio__tooltiptext
             {
@@ -1028,12 +1029,137 @@ body
                 opacity: 1;
             }
         }
+        @media(max-width:$r_mob_500)
+        {
+            height: 60px;
+        }
     }
     &__element
     {
         filter: grayscale(1); 
         opacity: 0.5;
         transition: 0.3s;
+
+        &-html
+        {
+            width: 78px;
+            height: 85px;
+            @media(max-width:$r_tab)
+            {
+                width: 54px;
+                height: 61px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 24px;
+                height: 25px;
+            }
+        }
+        &-css
+        {
+            width: 76px;
+            height: 82px;
+            @media(max-width:$r_tab)
+            {
+                width: 54px;
+                height: 61px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 24px;
+                height: 25px;
+            }
+        }
+        &-java
+        {
+            width: 72px;
+            height: 77px;
+            @media(max-width:$r_tab)
+            {
+                width: 52px;
+                height: 57px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 24px;
+                height: 25px;
+            }
+        }
+        &-jq
+        {
+            width: 76px;
+            height: 82px;
+            @media(max-width:$r_tab)
+            {
+                width: 56px;
+                height: 62px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 24px;
+                height: 25px;
+            }
+        }
+        &-solid
+        {
+            width: 71px;
+            height: 71px;
+            @media(max-width:$r_tab)
+            {
+                width: 51px;
+                height: 51px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        &-php
+        {
+            width: 105px;
+            height: 55px;
+            @media(max-width:$r_tab)
+            {
+                width: 85px;
+                height: 35px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 32px;
+                height: 17px;
+            }
+        }
+        &-vue
+        {
+            width: 81px;
+            height: 70px;
+            @media(max-width:$r_tab)
+            {
+                width: 61px;
+                height: 50px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 25px;
+                height: 21px;
+            }
+        }
+        &-word
+        {
+            width: 71px;
+            height: 71px;
+            @media(max-width:$r_tab)
+            {
+                width: 51px;
+                height: 51px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
     &__top
     {
@@ -1059,21 +1185,61 @@ body
         left: 0;
         margin-left: -60px;
         font-weight: 500;
-        font-size: 10px;
+        font-size: 1rem;
         line-height: 150%;
         opacity: 0.2;
         transition: 0.3s;
+        @media(max-width:$r_tab)
+        {
+            width: 156px;
+            left: 9px;
+            top: 120%;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: 98px;
+            left: 24px;
+        }
         &-vue
         {
             left: 6px;
+            @media(max-width:$r_tab)
+            {
+                left: 13px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                left: 24px;
+            }
         }
         &-php
         {
             left: 18px;
+            @media(max-width:$r_tab)
+            {
+                left: 24px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                left: 26px;
+            }
         }
         &-word
         {
             left: 5px;
+            @media(max-width:$r_tab)
+            {
+                left: 8px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                left: 22px;
+            }
+
+        }
+        @media(max-width:$r_mob_500)
+        {
+            top: 124%;
         }
         &::after 
         {
@@ -1086,17 +1252,27 @@ body
             border-style: solid;
             border-color: transparent transparent $red  transparent;
         }
+        
     }
+
 }
 .price
 {
     padding-top: 14rem;
+    @media(max-width:$r_tab)
+    {
+        padding-top: 9rem;
+    }
     &__head
     {
         display: flex;
         justify-content: space-between;
         position: relative;
         padding-bottom: 8rem;
+        @media(max-width:$r_tab)
+        {
+            display: block;
+        }
     }
     &__el
     {
@@ -1104,6 +1280,11 @@ body
         top: -51px;
         left: -68px;
         z-index: -1;
+        @media(max-width:$r_tab)
+        {
+            left: -86px;
+            top: -55px;
+        }
     }
     &__top
     {
@@ -1113,6 +1294,15 @@ body
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin: 0;
+        @media(max-width:$r_tab)
+        {
+            font-size: 2rem;
+            padding-bottom: 2rem;
+        }
+        @media(max-width:$r_mob_400)
+        {
+            font-size: 1.8rem;
+        }
     }
     &__des
     {
@@ -1122,16 +1312,36 @@ body
         width: 548px;
         height: 168px;
         margin: 0;
+        @media(max-width:$r_tab)
+        {
+            width: 75%;
+            font-size: 2rem;
+            height: 85px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: auto;
+        }
+        @media(max-width:$r_mob_400)
+        {
+            font-size: 1.8rem;
+        }
     }
     &__item
     {
-        border-top: 1px solid rgba($color: $wh, $alpha: 0.5);
+        border-top: 1px solid rgba($color: $wh, $alpha: 1);
         padding-top: 4rem;
+        &-3
+        {
+            @media(max-width:$r_tab)
+            {
+                border-bottom: 1px solid rgba($color: $wh, $alpha: 1);
+            }
+        }
     }
     &__first
     {
         display: flex;
-        align-items: center;
         justify-content: start;
     }
     &__h1
@@ -1140,6 +1350,27 @@ body
         line-height: 150%;
         width: 382px;
         font-weight: 400;
+        @media(max-width:$r_tab)
+        {
+            font-size: 2.2rem;
+            width: 250px;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.6rem;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: 88px;
+        }
+    }
+    &__br
+    {
+        display: none;
+        @media(max-width:$r_tab)
+        {
+            display: block;
+        }
     }
     &__descrip
     {
@@ -1149,24 +1380,61 @@ body
         line-height: 150%;
         opacity: 0.8;
         padding-top: 2rem;
+        @media(max-width:$r_tab)
+        {
+            font-size: 1.3rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1rem;
+        }
     }
     &__list
     {
         padding-left: 22.5rem;
+        @media(max-width:$r_tab_900)
+        {
+            padding-left: 9rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            padding-left: 4rem;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            padding-left: 9rem;
+        }
+
     }
     &__enter
     {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 150%;
         margin-left: -17px;
+        @media(max-width:$r_tab)
+        {
+            font-size: 1.4rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.2rem;
+        }
     }
     &__stage
     {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 200%;
         opacity: 0.8;
         padding-top: 0.7rem;
+        @media(max-width:$r_tab)
+        {
+            font-size: 1.4rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.2rem;
+        }
     }
     &__second
     {
@@ -1178,8 +1446,50 @@ body
     &__elsmal
     {
         position: absolute;
-        top: 30px;
-        right: 503px;
+        top: -13px;
+        right: 173px;
+        z-index: -1;
+        width: 90px;
+        height: 90px;
+        @media(max-width:$r_tab)
+        {
+            width: 65px;
+            height: 65px;
+            right: 136px;
+            top: -11px;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            width: 40px;
+            height: 40px;
+            right: 101px;
+            top: -3px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            right: 81px;
+            top: -6px;
+        }
+        &-2
+        {
+            right: 197px;
+            @media(max-width:$r_tab)
+            {
+                right: 151px;
+                top: -9px;
+            }
+            @media(max-width:$r_mob_600)
+            {
+                right: 113px;
+                top: -3px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                right: 91px;
+                top: -6px;
+            }
+        }
+       
     }
     &__rub
     {
@@ -1188,11 +1498,35 @@ body
         line-height: 150%;
         padding-left: 42rem;
         z-index: 1;
+        position: relative;
+        @media(max-width:$r_tab_900)
+        {
+            padding-left: 28.5rem;
+        }
+        @media(max-width:$r_tab)
+        {
+            font-size: 3.2rem;
+            padding-left: 15rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            padding-left: 10rem;
+            font-size: 2.4rem;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            padding-left: 5rem;
+        }
     }
 }
 .form
 {
     padding-top: 15rem;
+    &__wrapper
+    {
+        display: flex;
+        justify-content: center;
+    }
     &__head
     {
         display: flex;
@@ -1200,25 +1534,45 @@ body
         position: relative;
         padding-bottom: 5.5rem;
         position: relative;
-        border-bottom: 1px solid rgba($color: $wh, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: $wh, $alpha: 1);
+        @media(max-width:$r_desk)
+        {
+            display: block;
+        }
     }
     &__h1
     {
         font-weight: 700;
-        font-size: 28px;
+        font-size: 2.8rem;
         line-height: 150%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin: 0;
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.8rem;
+        }
     }
     &__text
     {
-        font-size: 28px;
+        font-size: 2.8rem;
         line-height: 150%;
         opacity: 0.8;
         width: 548px;
-        height: 168px;
         margin: 0;
+        @media(max-width:$r_desk)
+        {
+            padding-top: 2rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.8rem;
+            width: 312px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: 282px;
+        }
     }
     &__img
     {
@@ -1226,6 +1580,43 @@ body
         top: -32px;
         left: -181px;
         z-index: -1;
+        width: 331px;
+        height: 331px;
+        &-poly
+        {
+            display: none;
+            position: absolute;
+            top: -72px;
+            left: 50px;
+            z-index: -1;
+            width: 40px;
+            height: 43px;
+            @media(max-width:$r_desk)
+            {
+                display: block;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 31px;
+                height: 33px;
+                top: -54px;
+                left: 43px;
+            }
+        }
+        @media(max-width:$r_desk)
+        {
+            width: 250px;
+            height: 250px;
+            top: -85px;
+            left: -140px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: 190px;
+            height: 190px;
+            top: -73px;
+            left: -117px;
+        }
     }
     &__flex
     {
@@ -1234,12 +1625,24 @@ body
         align-items: center;
         padding-top: 6rem;
         padding-bottom: 10rem;
+        @media(max-width:$r_desk)
+        {
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding-bottom: 6rem;
+        }
     }
     &__soc
     {
         width: 277px;
         display: flex;
         align-self: flex-end;
+        @media(max-width:$r_desk)
+        {
+            align-self: center;
+            width: auto;
+            padding-top: 5rem;
+        }
     }
     &__link
     {
@@ -1252,15 +1655,35 @@ body
         width: 50px;
         border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
         margin-left: 30px;
+        @media(max-width:$r_tab)
+        {
+            margin-left: 15px;
+        }
         &-vk
         {
             width: 43px;
             margin-left: 0px;
             padding: 0;
+            @media(max-width:$r_tab)
+            {
+                width: 34px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 28px;
+            }
         }
         &-inst
         {
             width: 100px;
+            @media(max-width:$r_tab)
+            {
+                width: 90px;
+            }
+            @media(max-width:$r_mob_500)
+            {
+                width: 75px;
+            }
         }
         &-git
         {
@@ -1274,6 +1697,14 @@ body
     &__wrap
     {
         width: 560px;
+        @media(max-width:$r_tab)
+        {
+            width: 370px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            width: 261px;
+        }
     }
     &__label
     {
@@ -1286,7 +1717,7 @@ body
     &__input
     {
         background-color: rgba($color: $wh, $alpha: 0.1);
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 400;
         border: none;
         margin-bottom: 20px;
@@ -1294,6 +1725,8 @@ body
         width: 95%;
         padding-left: 25px;
         height: 60px;
+        color: $wh;
+
         &::placeholder
         {
             font-weight: 400;
@@ -1308,13 +1741,21 @@ body
         border: none;
         background-color: $red;
         color: $wh;
-        padding: 2rem 23.5rem;
+        padding: 20px 235px;
         margin-top: 4rem;
         font-weight: 700;
         font-size: 16px;
         line-height: 150%;
         cursor: pointer;
         transition: 0.3s;
+        @media(max-width:$r_tab)
+        {
+            padding: 20px 147px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            padding: 20px 94px;
+        }
         &:hover
         {
             background-color: #EA0E00;
@@ -1357,24 +1798,40 @@ body
     color: $wh;
     display:inline-block;
     cursor: pointer;
-    padding: 2.35rem 2rem 2.35rem 2rem;
+    padding: 23.5px 20px 23.5px 20px;
     background-color: rgba($color: $wh, $alpha: 0.1);
     transition: all .3s ease;
     font-size: 12px;
     line-height: 150%; 
-    width: 518px;   
+    width: 518px;
+    @media(max-width:$r_tab)
+    {
+        width: 340px;
+    }
+    @media(max-width:$r_mob_500)
+    {
+        width: 235px;
+    }
     &:after
     {
         content:"";
         display:inline-block;      
         height:.5em;
         width: 1em;
-        margin-left: 36.8em;
+        margin-left: 368px;
         background-image: url(../img/Arrowdown.svg);
         background-repeat:no-repeat;
         background-position: center;
         background-size: contain;      
         transition: transform .3s ease;
+        @media(max-width:$r_tab)
+        {
+            margin-left: 268px;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            margin-left: 168px;
+        }
     }
 }
     
@@ -1433,8 +1890,26 @@ body
         display: flex;
         justify-content: space-between;
         align-items: end;
-        border-top: 1px solid rgba($color: $wh, $alpha: 0.5);
+        border-top: 1px solid rgba($color: $wh, $alpha: 1);
         height: 84px;
+        @media(max-width:$r_tab_900)
+        {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4rem;
+        }
+        @media(max-width:$r_mob_600)
+        {
+            padding-top: 2rem;
+        }
+    }
+    &__contact
+    {
+        @media(max-width:$r_tab_900)
+        {
+            padding-bottom: 2rem;
+        }
     }
     &__list
     {
@@ -1443,21 +1918,41 @@ body
         margin: 0;
         padding-left: 0;
         gap: 2.8rem;
+        @media(max-width:$r_mob_600)
+        {
+            gap: 1.8rem;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            gap: 1rem;
+        }
     }
     &__link
     {
         font-size: 1.4rem;
         line-height: 1.5;
+        @media(max-width:$r_mob_600)
+        {
+            font-size: 1.2rem;
+        }
     }
     &__tel
     {
         border-right: 2px solid rgba($color: $wh, $alpha: 0.5);
         width: 140px;
         padding-right: 3rem;
+        @media(max-width:$r_mob_600)
+        {
+            padding-right: 1.5rem;
+        }
     }
     &__mail
     {
         padding-left: 3rem;
+        @media(max-width:$r_mob_600)
+        {
+            padding-left: 1.5rem;
+        }
     }
     &__under
     {
@@ -1465,18 +1960,28 @@ body
         justify-content: space-between;
         align-items: center;
         padding-top: 3rem;
+        @media(max-width:$r_mob_600)
+        {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 1.5rem;
+        }
+        @media(max-width:$r_mob_500)
+        {
+            padding-top: 0;
+        }
     }
     &__copy 
     {
         opacity: 0.3;
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 150%;
     }
    
     &__author-text 
     {
         opacity: 0.3;
-        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 150%;
     }
 
@@ -1508,8 +2013,20 @@ body
 {
     background-color: $black;
     max-width: 587px;
-    margin: 100px auto;
+    margin: 140px auto;
     position: relative;
+    @media(max-width:$r_mob_700)
+    {
+        margin: 140px 50px;
+    }
+    @media(max-width:$r_mob_600)
+    {
+        margin: 140px 35px;
+    }
+    @media(max-width:$r_mob_500)
+    {
+        margin: 140px 10px;
+    }
     &__form
     {
         padding-top: 5.5rem;
@@ -1517,20 +2034,41 @@ body
     }
     &__head
     {
-        display: block;
+        display: flex;
         text-align: center;
+        flex-direction: column;
+        justify-content: center;
         padding-bottom: 3rem;
     }
     &__h1
     {
-        font-size: 22px;
+        font-size: 2.2rem;
+        @media(max-width:$r_mob_600)
+        {
+           font-size: 1.8rem;
+        }
+    }
+    &__br
+    {
+        display: block;
+        @media(max-width:$r_mob_600)
+        {
+            display: none;
+        }
+    }
+    &__brr
+    {
+        display: none;
+        @media(max-width:$r_mob_600)
+        {
+            display: block;
+        }
     }
     &__text
     {
-        font-size: 16px;
-        width: 426px;
+        font-size: 1.6rem;
         height: auto;
-        padding-left: 6rem;
+        width: 100%;
     }
     &__wrap
     {
