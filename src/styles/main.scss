@@ -23,6 +23,11 @@ html
         font-size: 8px;
     }
 }
+body.openModal
+{
+    height: 100vh;
+    overflow-y: hidden;
+}
 body
 {
     font-family: Inter;
@@ -1723,7 +1728,8 @@ body
         margin-bottom: 20px;
         outline: none;
         width: 95%;
-        padding-left: 25px;
+        padding-left: 12.5px;
+        padding-right: 12.5px;
         height: 60px;
         color: $wh;
 
@@ -2008,24 +2014,25 @@ body
     background: rgba(0, 0, 0, 0.7);
     border: none;
     z-index: 3;
+
 }
 .popupmax
 {
     background-color: $black;
     max-width: 587px;
-    margin: 140px auto;
+    margin: 174px auto;
     position: relative;
     @media(max-width:$r_mob_700)
     {
-        margin: 140px 50px;
+        margin: 174px 50px;
     }
     @media(max-width:$r_mob_600)
     {
-        margin: 140px 35px;
+        margin: 174px 35px;
     }
     @media(max-width:$r_mob_500)
     {
-        margin: 140px 10px;
+        margin: 174px 10px;
     }
     &__form
     {
