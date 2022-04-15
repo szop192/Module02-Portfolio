@@ -4,6 +4,7 @@ $red: #D40000;
 $black: #232326;
 $wh: #F3F2F0;
 
+$r_mob_360:360px;
 $r_mob_400:400px;
 $r_mob_500:500px;
 $r_mob_600:600px;
@@ -440,6 +441,10 @@ body
         {
             width: 142px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            width: 122px;
+        }
     }
     &-2
     {
@@ -453,6 +458,10 @@ body
         {
             width: 140px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            width: 122px;
+        }
     }
     &__h1
     {
@@ -464,6 +473,10 @@ body
         @media (max-width:$r_mob_600) 
         {
             font-size: 1.4rem;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1.2rem;
         }
         &-up
         {
@@ -479,12 +492,20 @@ body
         {
             font-size: 1.2rem;
         }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1rem;
+        }
         &-1
         {
             width: 200px;
             @media (max-width:$r_mob_500) 
             {
                 width: 150px;
+            }
+            @media(max-width:$r_mob_360)
+            {
+                width: 122px;
             }
         }
         &-2
@@ -493,6 +514,10 @@ body
             @media (max-width:$r_mob_500) 
             {
                 width: 158px;
+            }
+            @media(max-width:$r_mob_360)
+            {
+                width: 127px;
             }
         }
         &-3
@@ -506,6 +531,10 @@ body
             {
                 width: 150px;
             }
+            @media(max-width:$r_mob_360)
+            {
+                width: 127px;
+            }
         }
         &-4
         {
@@ -513,6 +542,10 @@ body
             @media (max-width:$r_mob_500) 
             {
                 width: 170px;
+            }
+            @media(max-width:$r_mob_360)
+            {
+                width: 141px;
             }
         }
     }
@@ -547,6 +580,10 @@ body
             display: block;
             height: 180px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            height: 145px;
+        }
        
     }
     &__h1
@@ -570,6 +607,10 @@ body
         {
             font-size: 1.8rem;
         }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1.6rem;
+        }
     }
     &__box
     {
@@ -587,6 +628,10 @@ body
         {
             width: 300px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            width: 265px;
+        }
     }
     &__text
     {
@@ -602,6 +647,10 @@ body
         @media (max-width:$r_mob_600)
         {
             font-size: 1.8rem;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1.6rem;
         }
     }
     &__grid
@@ -691,10 +740,18 @@ body
             font-size: 1.8rem;
             width: 136px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1.6rem;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            width: 116px;
+        }
     }
     &__text
     {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 150%;
         opacity: 0.8;
         @media (max-width: $r_tab)
@@ -704,16 +761,25 @@ body
         @media (max-width: $r_mob_500)
         {
             font-size: 1.4rem;
+            padding-left: 2rem;
         }
         @media (max-width: $r_mob_500)
         {
             width: 127px;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1.2rem;
         }
         &-2 
         {
             @media (max-width: $r_mob_500)
             {
                 width: 153px;
+            }
+            @media(max-width:$r_mob_360)
+            {
+                width: 136px;
             }
         }
     }
@@ -734,7 +800,7 @@ body
         padding-right: 2.9rem;
         @media (max-width: $r_tab)
         {
-            padding-right: 0rem;
+            padding-right: 1rem;
         }
 
     }
@@ -1578,6 +1644,10 @@ body
         {
             width: 282px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            width: 267px;
+        }
     }
     &__img
     {
@@ -1710,6 +1780,10 @@ body
         {
             width: 261px;
         }
+        @media(max-width:$r_mob_360)
+        {
+            width: 230px;
+        }
     }
     &__label
     {
@@ -1761,6 +1835,10 @@ body
         @media(max-width:$r_mob_500)
         {
             padding: 20px 94px;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            padding: 20px 78px;
         }
         &:hover
         {
@@ -1818,6 +1896,10 @@ body
     {
         width: 235px;
     }
+    @media(max-width:$r_mob_360)
+    {
+        width: 204px;
+    }
     &:after
     {
         content:"";
@@ -1837,6 +1919,10 @@ body
         @media(max-width:$r_mob_500)
         {
             margin-left: 168px;
+        }
+        @media(max-width:$r_mob_360)
+        {
+            margin-left: 136px;
         }
     }
 }
@@ -1932,6 +2018,10 @@ body
         {
             gap: 1rem;
         }
+        @media(max-width:$r_mob_360)
+        {
+            gap: 0.5rem;
+        }
     }
     &__link
     {
@@ -1989,6 +2079,10 @@ body
         opacity: 0.3;
         font-size: 1.2rem;
         line-height: 150%;
+        @media(max-width:$r_mob_360)
+        {
+            font-size: 1rem;
+        }
     }
 
     &__author-link 
