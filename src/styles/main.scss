@@ -57,11 +57,15 @@ body
 .link
 {
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.5s ease;
     color: $wh;
+    -webkit-transition: all 0.5s ease;
     &:hover
     {
         color: $red;
+        -webkit-text-shadow: 2px 2px 2px #000;
+        -moz-text-shadow: 2px 2px 2px #000;
+        text-shadow: 2px 2px 2px #000;
     }
 }
 .header
